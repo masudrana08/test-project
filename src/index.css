@@ -1,13 +1,41 @@
-body {
+:root{
+  --fs-400: .85rem;
+  --fs-500: 1rem;
+  --fs-600: 1.82rem;
+  --fs-700: 2.94rem;
+  --ff-opensans: 'Open Sans', sans-serif;
+  --ff-roboto: 'Roboto', sans-serif;
+  --bg: rgb(239, 82, 12);
+  font-size: 16px;
+  font-family: var(--ff-opensans);
+  --text-primary: rgb(47, 47, 47);
+  --text-secondary: rgb(255, 255, 255);
+  
+}
+*, *:before, *:after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: var(--ff-opensans);
+  color: var(--text-primary);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding:0;
 }
+h1{font-size: var(--fs-700)}
+h2{font-size: var(--fs-600)}
+
+p, section, span, ul, li, a{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: var(--fs-500);
+  margin: 0;
+  padding:0;
+  list-style: none;
+  text-decoration: none;
+}
+

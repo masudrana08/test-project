@@ -1,0 +1,12 @@
+.layoutCont{
+    display: grid;
+    grid-template-columns: 200px 8fr;
+}
+
+.layoutCont .left{
+    background-color: var(--text-primary);
+}
+
+.layoutCont .left * {
+    color: var(--text-secondary)
+}

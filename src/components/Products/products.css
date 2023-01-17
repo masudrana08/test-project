@@ -1,0 +1,43 @@
+.productCont{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em 1em;
+    padding: 1em;
+}
+
+.myProduct{
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+
+.myProduct .imgCont img{
+    width: 100%;
+    max-height: 250px;
+    max-width: 400px;
+    border-radius: 1em;
+}
+.myProduct .textCont{
+    margin-top: .5em;
+    display: flex;
+    column-gap: 1em;
+}
+.myProduct .textCont img{
+    width: 45px;
+    border-radius: 50%;
+}
+.myProduct .textCont .title{
+    font-weight: 400;
+    font-family: var(--ff-roboto);
+
+}
+.myProduct .textCont .sec2{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1em;
+    
+    
+}
+
+.myProduct .textCont .sec2 p{
+    font-size: var(--fs-400);
+}
