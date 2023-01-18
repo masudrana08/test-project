@@ -1,19 +1,31 @@
 import Home from './pages/Home/Home';
 import { createContext, useState } from "react";
 interface createContextI{
-  test: string,
-  setTest: (msg:string) => void; 
+  year: string,
+  setYear: (msg:string) => void; 
+  category: string,
+  setCategory: (msg:string) => void; 
+  search: string,
+  setSearch: (msg:string) => void; 
 }
 export const MyContext = createContext<createContextI>({
-  test: "",
-  setTest: (msg) => {}
+  year: "",
+  setYear: (msg) => {},
+  category: "",
+  setCategory: (msg) => {},
+  search: "",
+  setSearch: (msg) => {},
 });
 
 
 function App() {
-  const [test, setTest] = useState<string>("oops")
+  const [year, setYear] = useState<string>("")
+  const [category, setCategory] = useState<string>("")
+  const [search, setSearch] = useState<string>("")
   const value = {
-    test, setTest
+    category, setCategory,
+    year, setYear,
+    search, setSearch
   }
   return (
     <MyContext.Provider value={value}>

@@ -22,6 +22,8 @@ option{
     .sideCont{
         flex-direction: column;
         row-gap: .7em;
+        height: 100vh;
+        justify-content: unset;
 
     }
     .yearCont, .catCont{

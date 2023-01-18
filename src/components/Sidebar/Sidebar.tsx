@@ -1,5 +1,7 @@
 import p from "../../assets/products.json"
 import "./sidebar.css"
+import { useContext } from 'react';
+import { MyContext } from "../../App";
 
 interface productsI {
   name: string,
@@ -11,6 +13,8 @@ interface productsI {
   year: string,
 }
 export default function Sidebar() {
+  const {setCategory, setYear} = useContext(MyContext);
+  
   const products:productsI[] = p;
   const years:string[] = [];
   const categories:string[] = [];
@@ -29,8 +33,8 @@ export default function Sidebar() {
     <div className="sideCont">
       <div className="yearCont">
         <label htmlFor="years">Year: </label>
-        <select name="years" id="years">
-          <option value="All" >All</option>
+        <select name="years" id="years" onChange={(e)=>setYear(e.target.value)}>
+          <option value="" >All</option>
           {
             years.map((y, i)=>{
               return <option key={i} value={y} >{y}</option>
@@ -41,8 +45,8 @@ export default function Sidebar() {
 
       <div className="catCont">
         <label htmlFor="Categories">Category: </label>
-        <select name="categories" id="categories">
-          <option value="All" >All</option>
+        <select name="categories" id="categories" onChange={(e)=>setCategory(e.target.value)}>
+          <option value="" >All</option>
           {
             categories.map((c, i)=>{
               return <option key={i} value={c} >{c}</option>

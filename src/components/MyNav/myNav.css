@@ -84,7 +84,13 @@
 
 }
 
-
+input{
+    border: none;
+    outline: none;
+    border: 1px solid lightcoral;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
 
 
 
