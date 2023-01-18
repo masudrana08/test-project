@@ -3,11 +3,11 @@
     flex-wrap: wrap;
     gap: 1.5em 1em;
     padding: 1em;
+    justify-content: center;
 }
 
 .myProduct{
     flex-basis: 300px;
-    flex-grow: 1;
 }
 
 .myProduct .imgCont img{

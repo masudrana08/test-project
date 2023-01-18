@@ -1,6 +1,4 @@
-.mynav *{
-    color: var(--text-secondary);
-}
+
 
  .navv {
     background-color: var(--bg);
@@ -10,12 +8,15 @@
     height: 50px;
 }
 
- 
+.mynav .logo * {
+    color: var(--secondary-color);
+}
 .mynav .logo{
     display: flex;
     justify-content: center;
     height: 50px;
     align-items: center;
+    
     margin-left: -2em;
 }
 
@@ -86,11 +87,8 @@
 
 
 
-/* Media Query  for Ipads and Tablets */
-@media only screen and (min-width: 481px) {
-   
-}
-/* Media Query  for Small Laptop */
+
+
 @media only screen and (min-width: 769px) {
     .nav-toogler-label{
         display: none;
@@ -100,7 +98,7 @@
     }
     .navv .items{
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         gap: 1em;
     }
     .navv{
@@ -116,12 +114,4 @@
         grid-area: T;
     }
     
-}
-/* Media Query  for Large Desktop */
-@media only screen and (min-width: 1025px) {
-   
-}
-/* Media Query  for Extra Large Screens or TV */
-@media only screen and (min-width: 1201px) {
-   
 }

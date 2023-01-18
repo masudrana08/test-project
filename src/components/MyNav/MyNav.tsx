@@ -12,9 +12,7 @@ export default function MyNav() {
           <h3>E-Commerce</h3>
         </div>
         <ul className='items'>
-        <li>Home</li>
-        <li>Subscription</li>
-        <li>Watch Later</li>
+        <input type="text" placeholder="search..."/>
       </ul>
       </div>
       

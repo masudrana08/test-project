@@ -8,8 +8,8 @@
   --bg: rgb(239, 82, 12);
   font-size: 16px;
   font-family: var(--ff-opensans);
-  --text-primary: rgb(47, 47, 47);
-  --text-secondary: rgb(255, 255, 255);
+  --primary-color: rgb(47, 47, 47);
+  --secondary-color: rgb(255, 255, 255);
   
 }
 *, *:before, *:after {
@@ -17,7 +17,7 @@
   margin: 0;
   padding: 0;
   font-family: var(--ff-opensans);
-  color: var(--text-primary);
+  color: var(--primary-color);
 }
 
 h1, h2, h3{

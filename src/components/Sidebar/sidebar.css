@@ -1,0 +1,32 @@
+.sideCont label{
+    color: var(--secondary-color);
+}
+
+.sideCont{
+    display: flex;
+    justify-content: center;
+    column-gap: 1em;
+    padding: .7em;
+}
+
+select{
+    border-radius: 5px;
+    padding: .3em .5em;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+option{
+    color: var(--secondary-color);
+}
+@media only screen and (min-width: 769px) {
+    .sideCont{
+        flex-direction: column;
+        row-gap: .7em;
+
+    }
+    .yearCont, .catCont{
+        display: flex;
+        justify-content: space-between;
+    }
+   
+}

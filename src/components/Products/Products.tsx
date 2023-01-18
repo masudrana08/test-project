@@ -21,11 +21,11 @@ export default function Products() {
             return (
               <div className="myProduct">
                 <div className="imgCont">
-                  <img src={product.image}/>
+                  <img src={product.image} alt={product.name + " image "}/>
                 </div>
                 <div className="textCont">
                   <div className='profile'>
-                    <img src="https://yt3.ggpht.com/ytc/AMLnZu_xXlTuUsQq8VY3z29czWIMq3uc-jFYg9bU5GZJ=s68-c-k-c0x00ffffff-no-rj" alt="" />
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80" alt="" />
                   </div>
                   <div>
                     <div className="title">{product.name}</div>

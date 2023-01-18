@@ -1,12 +1,21 @@
-.layoutCont{
-    display: grid;
-    grid-template-columns: 200px 8fr;
-}
+
 
 .layoutCont .left{
-    background-color: var(--text-primary);
+    background-color: var(--primary-color);
 }
 
-.layoutCont .left * {
-    color: var(--text-secondary)
+
+@media only screen and (min-width: 769px) {
+    .layoutCont{
+        display: grid;
+        grid-template-columns: 200px 10fr;
+        grid-template-areas:
+        "left right";
+    }
+    .layoutCont .left{
+        grid-area: left;
+    }
+    .layoutCont .right{
+        grid-area: right;
+    }
 }
