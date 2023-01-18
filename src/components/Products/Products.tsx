@@ -2,6 +2,7 @@ import './products.css'
 import p from "../../assets/products.json"
 import {useContext} from 'react'
 import { MyContext } from '../../App';
+import MyModal from '../MyModal/MyModal';
 
 interface productsI {
   name: string,
@@ -35,6 +36,7 @@ export default function Products() {
     
   return (
     <div className='productCont'>
+      <MyModal />
         {
           filtered.map((product, i)=>{
             return (
@@ -56,8 +58,6 @@ export default function Products() {
                       <div><p>Year: {product.year}</p></div>
                     </div>
                   </div>
-                  
-                
                 </div>
               </div>
             )
