@@ -3,8 +3,9 @@ import p from "../../assets/products.json"
 import {useContext} from 'react'
 import { MyContext } from '../../App';
 import MyModal from '../MyModal/MyModal';
+import ProductCard from '../ProductCard/ProductCard';
 
-interface productsI {
+ export interface productsI {
   name: string,
   image: string,
   category: string,
@@ -12,7 +13,9 @@ interface productsI {
   size: string,
   price: string,
   year: string,
+  description:string
 }
+
 export default function Products() {
   const {category, year, search} = useContext(MyContext)
 
@@ -36,30 +39,10 @@ export default function Products() {
     
   return (
     <div className='productCont'>
-      <MyModal />
         {
           filtered.map((product, i)=>{
             return (
-              <div className="myProduct" key={i}>
-                <div className="imgCont">
-                  <img src={product.image} alt={product.name + " image "}/>
-                </div>
-                <div className="textCont">
-                  <div className='profile'>
-                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8&w=1000&q=80" alt="" />
-                  </div>
-                  <div>
-                    <div className="title">{product.name}</div>
-                    <div className="sec2">
-                      <p>{product.category}</p>
-                      <div><p>{product.size}</p></div>
-                      <div><p>Brand: {product.brand}</p></div>
-                      <div><p>Price: {product.price}</p></div>
-                      <div><p>Year: {product.year}</p></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <ProductCard key={i} product={product} />
             )
           })
         }

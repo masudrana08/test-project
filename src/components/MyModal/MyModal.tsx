@@ -1,7 +1,10 @@
-import {useState, createRef, useEffect} from "react";
+import React, {useState, createRef, useEffect} from "react";
 import "./myModal.css";
-
-export default function MyModal() {
+interface MyModalI{
+ children:React.ReactNode;
+ description:string
+}
+export default function MyModal(props:MyModalI) {
     const modalRef = createRef<HTMLDivElement>();
     const modalContentRef = createRef<HTMLDivElement>();
     const spanRef = createRef<HTMLDivElement>();
@@ -10,23 +13,24 @@ export default function MyModal() {
             modalRef.current.style.display = d;
         }
     }
-    window.onclick = (e) =>{
-        if (modalRef.current && e.target == modalRef.current ) {
-            modalRef.current.style.display = "none";
-        }
-        
-    }
     
   return (
-    <div>
-      <button id="myBtn" onClick={()=>handleModal("block")}>Open Modal</button>
+    <>
+      <div onClick={()=>handleModal("block")}>
+        {props.children}
+      </div>
       <div ref={modalRef} id="myModal" className="modal">
         <div ref={modalContentRef} className="modal-content">
           <span ref={spanRef} className="close" onClick={()=>handleModal("none")}>&times;</span>
-          <p>Some text in the Modal..</p>
+          {
+            props.children
+          }
+          <div >
+            {props.description}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
