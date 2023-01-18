@@ -16,10 +16,14 @@
   .modal-content {
     background-color: #fefefe;
     /* margin: 15% auto;  */
-    padding: 20px;
+    padding: 20px 20px 50px 20px;
     border: 1px solid #888;
     max-width: 500px;
-    margin:10vh 25%;
+    margin-left: 0;
+    margin-right: 0;
+    margin: auto;
+    margin-top: 100px;
+
   }
   
   
@@ -39,4 +43,8 @@
 
   .modal-content .myProduct img{
     max-width: 100%;
+  }
+
+  .modal-content .del{
+    float: right;
   }

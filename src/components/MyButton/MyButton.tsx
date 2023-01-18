@@ -11,6 +11,6 @@ export default function MyButton({btnName, func, funcParam}:MyButtonProps) {
         }
       }
   return (
-    <button onClick={handleClick}>{btnName}</button>
+    <button className='mybtn' onClick={handleClick}>{btnName}</button>
   )
 }

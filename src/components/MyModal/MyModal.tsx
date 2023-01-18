@@ -1,8 +1,11 @@
-import React, {useState, createRef, useEffect} from "react";
+import React, {useState, createRef, useContext} from "react";
+import { MyContext } from "../../App";
+import MyButton from "../MyButton/MyButton";
 import "./myModal.css";
 interface MyModalI{
  children:React.ReactNode;
- description:string
+ description:string,
+ id: number
 }
 export default function MyModal(props:MyModalI) {
     const modalRef = createRef<HTMLDivElement>();
@@ -13,9 +16,14 @@ export default function MyModal(props:MyModalI) {
             modalRef.current.style.display = d;
         }
     }
-    
+    const { products, setProducts } = useContext(MyContext);
+    const handleDelete = () => {
+      const filtered = products.filter((item) => item.id !== props.id);
+      setProducts(filtered);
+      handleModal("none")
+    };
   return (
-    <>
+    < >
       <div onClick={()=>handleModal("block")}>
         {props.children}
       </div>
@@ -28,6 +36,9 @@ export default function MyModal(props:MyModalI) {
           <div >
             {props.description}
           </div>
+        <div className="del" onClick={handleDelete}>
+          <MyButton btnName="Delete" />
+        </div>
         </div>
       </div>
     </>

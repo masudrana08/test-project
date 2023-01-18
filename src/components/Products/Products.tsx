@@ -1,11 +1,10 @@
 import './products.css'
-import p from "../../assets/products.json"
 import {useContext} from 'react'
 import { MyContext } from '../../App';
-import MyModal from '../MyModal/MyModal';
 import ProductCard from '../ProductCard/ProductCard';
 
  export interface productsI {
+  id: number,
   name: string,
   image: string,
   category: string,
@@ -17,9 +16,8 @@ import ProductCard from '../ProductCard/ProductCard';
 }
 
 export default function Products() {
-  const {category, year, search} = useContext(MyContext)
+  const {category, year, search, products} = useContext(MyContext)
 
-  const products:productsI[] = p;
   const filtered = products.filter((item)=>{
     let matchCategory = true;
     let matchYear = true;

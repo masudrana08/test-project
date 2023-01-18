@@ -1,21 +1,9 @@
-import p from "../../assets/products.json"
 import "./sidebar.css"
 import { useContext } from 'react';
 import { MyContext } from "../../App";
 
-interface productsI {
-  name: string,
-  image: string,
-  category: string,
-  brand: string,
-  size: string,
-  price: string,
-  year: string,
-}
 export default function Sidebar() {
-  const {setCategory, setYear} = useContext(MyContext);
-  
-  const products:productsI[] = p;
+  const {setCategory, setYear, products} = useContext(MyContext);
   const years:string[] = [];
   const categories:string[] = [];
 
